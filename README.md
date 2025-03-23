@@ -1,13 +1,15 @@
 This simulates a fictional "pollination ecosystem", where pollinators interact with flowers and face environmental hazards. 
 
-Rules
+Pollinator Behaviour
+  Activity: 
+    Crowd around flowers, leading to resource depletion and competition.
+    Pollinators with better speed and efficiency, thrive and reproduce.
+    Some pollinators explore new flowers across the environment, while others remain near known resource locations, balancing short-term gain with long-term success.
   Movement:
     Pollinators move randomly across the environment.
     If flowers are detected within a certain range, pollinators slow down and steer toward them.
   Flower Interaction:
     Pollinators collect nectar from flowers upon reaching them.
-    Flowers regenerate 1 nectar every 160 frames.
-    Flowers die (are removed from the environment) if they overlap with hazard zones.
   Reproduction:
     Pollinators reproduce after consuming 3 units of nectar.
     Reproduction only occurs when pollinators are in safe zones.
@@ -22,14 +24,11 @@ Environment
   Flowers:
     Static resources positioned randomly within the environment.
     Provide nectar to pollinators and regenerate over time.
-    Removed when overlapping with hazard zones.
+    Flowers regenerate 1 nectar every 160 frames.
+    Hold up to 5 nectar units. 
+    Removed when overlapping with hazard zones >30%.
   Hazard Zones:
     Hazard zones expand by 10 units in radius every 10 seconds, representing escalating environmental challenges.
   Safe Zones:
     Regions where pollinators can reproduce.
 
-
-Pollinator Behaviors
-  Pollinators crowd around flowers, leading to resource depletion and competition.
-  Pollinators with better speed and efficiency, thrive and reproduce.
-  Some pollinators explore new flowers across the environment, while others remain near known resource locations, balancing short-term gain with long-term success.
