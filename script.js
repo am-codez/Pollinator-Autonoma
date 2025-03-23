@@ -126,6 +126,12 @@ function draw() {
   }
 }
 
+function mousePressed() {
+  // Add pollinator upon mouse press
+  pollinators.push(new Pollinator(mouseX, mouseY));
+}
+
+
 // Pollinator Class
 class Pollinator {
   constructor(x, y, parentSize = random(7.5, 15), parentSpeed = random(2, 4)) {
@@ -242,6 +248,7 @@ class Pollinator {
   }
 }
 
+
 // Flower Class
 class Flower {
   constructor(x, y) {
@@ -282,6 +289,7 @@ class Flower {
     text(this.nectar, this.position.x, this.position.y - 20);
   }
 }
+
 
 // Zone Class
 class Zone {
